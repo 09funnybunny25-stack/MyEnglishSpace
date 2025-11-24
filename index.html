@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your English Tutor — Tatyana Tsoy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <meta name="description" content="Яркий и эффективный курс английского для школьников и подростков. Индивидуальные занятия, подготовка к экзаменам и разговорная практика.">
+  <style>
+    :root{
+      --bg1:#12d7e5; /* coral */
+      --bg2:#ffc371; /* sunshine */
+      --accent:#2b2d42; /* dark */
+      --card: rgba(255,255,255,0.12);
+      --glass: rgba(255,255,255,0.09);
+      --glass-strong: rgba(255,255,255,0.14);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,system-ui,Arial; color:var(--accent); -webkit-font-smoothing:antialiased;
+      background: linear-gradient(135deg,var(--bg1),var(--bg2)); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .wrap{width:100%;max-width:1100px;background:linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06)); border-radius:20px; padding:28px; box-shadow:0 12px 40px rgba(0,0,0,0.18); backdrop-filter: blur(6px);}
+    header{display:flex;gap:20px;align-items:center}
+    .logo{display:flex;align-items:center;gap:14px}
+    .logo .mark{width:72px;height:72px;border-radius:16px;background:linear-gradient(135deg,#fff4,#ffffff00);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.12);}
+    .mark h1{font-family:Pacifico,Inter; margin:0;font-size:26px;color:white; text-shadow:0 2px 6px rgba(0,0,0,0.18)}
+    .who{flex:1}
+    .who h2{margin:0;font-size:20px;color:white}
+    .who p{margin:6px 0 0;opacity:0.95;color:rgba(255,255,255,0.95)}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:18px}
+    @media(max-width:920px){.hero{grid-template-columns:1fr;} .hero-right{order:-1}}
+
+    .card{background:var(--card);padding:20px;border-radius:14px;color:white}
+    .headline{font-size:28px;margin:0 0 8px}
+    .sub{margin:0 0 12px;opacity:0.95}
+
+    .features{display:flex;gap:10px;flex-wrap:wrap}
+    .feat{background:var(--glass);padding:10px 12px;border-radius:10px;font-weight:600}
+
+    .hero-right{display:flex;flex-direction:column;gap:12px}
+    .price{font-size:20px;font-weight:700}
+
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;background:white;color:var(--accent);font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+    .btn.secondary{background:transparent;border:2px solid rgba(255,255,255,0.18);color:white}
+
+    .lessons{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    @media(max-width:600px){.lessons{grid-template-columns:1fr}}
+    .lesson{background:var(--glass-strong);padding:12px;border-radius:10px}
+    .lesson h4{margin:0 0 6px}
+
+    .testimonials{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+    .test{background:rgba(255,255,255,0.06);padding:12px;border-radius:10px}
+
+    footer{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:10px}
+    .contact{display:flex;gap:12px;align-items:center}
+
+    /* playful floating shapes */
+    .shape{position:absolute; border-radius:50%; opacity:0.12;filter: blur(14px)}
+    .s1{width:240px;height:240px;background:#12d7e5; left:-40px; top:-80px}
+    .s2{width:140px;height:140px;background:#ffffff; right:-30px; bottom:20px}
+
+    /* small animation */
+    .pulse{animation:pulse 3s ease-in-out infinite}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)} }
+
+    /* form */
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea,select{padding:10px;border-radius:10px;border:0;outline:0;font-size:14px}
+
+    .mini{font-size:12px;opacity:0.9}
+  </style>
+</head>
+<body>
+  <div class="shape s1"></div>
+  <div class="shape s2"></div>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark"><h1>Hi!</h1></div>
+        <div class="who">
+          <h2>Татьяна — репетитор английского</h2>
+          <p>Индивидуальные занятия\мини-группы • подготовка к экзаменам ОГЭ\ЕГЭ• разговорная практика</p>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div class="mini" style="color:white">Опыт: <strong>более 15 лет</strong></div>
+        <div class="mini" style="color:white">Формат: онлайн / офлайн</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="card pulse">
+          <h3 class="headline">Заговори на английском с уверенностью</h3>
+          <p class="sub">Я помогаю школьникам и подросткам пройти от базового уровня до свободного общения. Яркие уроки, реальные результаты.</p>
+          <div class="features">
+            <div class="feat">Индивидуальная программа</div>
+            <div class="feat">Грамматика + разговор</div>
+            <div class="feat">Подготовка ОГЭ</div>
+            <div class="feat">Интерактивные домашние задания на платформе Взнания</div>
+          </div>
+
+          <div class="lessons">
+            <div class="lesson">
+              <h4>Разговорный английский</h4>
+              <p class="mini">Практика речи, расширение словарного запаса — 45 минут.</p>
+            </div>
+            <div class="lesson">
+              <h4>Экзамены</h4>
+              <p class="mini">Стратегия подготовки: ОГЭ, ЕГЭ.</p>
+            </div>
+            <div class="lesson">
+              <h4>Курс Учимся читать по-английски</h4>
+              <p class="mini">Обучаю чтению с 0.Ученик начинает читать уже с 1-го занятия.</p>
+            </div>
+            <div class="lesson">
+              <h4>Разговорный детский курс</h4>
+              <p class="mini">Игровые занятия для школьников и дошкольников.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials">
+          <div class="test">
+            <strong>Мария, 16 лет</strong>
+            <p class="mini">"Татьяна, хотел вам выразить слова благодарности за занятия с Машей. Тот базис знаний которые вы заложили стал прочным фундаментом для дальнейшего углубленного изучения языка. В настоящий момент продолжаем обучение с носителем языка (который не говорит и не понимает русского языка) по видеосвязи. Преподаватель выдал заключение, что у Марии отличное знание грамматики, большой запас слов, во время разговора не думает о переводе услышанного, или о чем нужно сказать, как было сказано "думает на иностранном языке"."</p>
+          </div>
+          <div class="test">
+            <strong>Юлия, 38 лет</strong>
+            <p class="mini">"Татьяна Викторовна занималась с двумя моими детьми, и я могу уверенно сказать, что она очень грамотный преподаватель, находит подход к каждому ебенку. Очень интереснс построен урок, используется нестандартный творческий подход к иЗучению сложных тем: много игр, интерактива тематические квесты, для запоминания используются специально разработанныє шаблоны! Мои дети С большим удовольствием посешают занятия, и каждый раз ждут нового!!! И благодаря урокам с Татьяной Викторовной, на уроках в школе получают пятерки!!! Желает процветания И вдохновения нашему дорогому учителю!!!."</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="card" style="display:flex;flex-direction:column;gap:10px;align-items:stretch">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div class="mini">Разовое занятие</div>
+              <div class="price">1500 ₽ / 45 мин</div>
+            </div>
+            <div style="text-align:right">
+              <div class="mini">Пробный урок</div>
+              <div style="font-weight:800">20 мин — бесплатно</div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:8px">
+            <a class="btn" href="mailto:anna@example.com?subject=Запись%20на%20урок">Записаться</a>
+            <a class="btn secondary" href="#contacts">Контакты</a>
+          </div>
+
+          <div style="margin-top:6px;font-size:13px;opacity:0.95">Также возможна рассрочка и пакетные скидки — напишите для расчёта.</div>
+        </div>
+
+        <div class="card">
+          <h4 style="margin:0 0 8px">Форма связи</h4>
+          <form id="contactForm" onsubmit="return submitForm(event)">
+            <input id="name" placeholder="Ваше имя" required />
+            <input id="email" placeholder="Email или телефон" required />
+            <select id="service">
+              <option>Разговорный английский</option>
+              <option>Подготовка к экзаменам</option>
+              <option>Учимся читать по-английски</option>
+              <option>Разговорный детский курс</option>
+            </select>
+            <textarea id="note" rows="3" placeholder="Кратко о целях (необязательно)"></textarea>
+            <button class="btn" type="submit">Отправить</button>
+          </form>
+          <div id="msg" class="mini" style="margin-top:8px;opacity:0.95"></div>
+        </div>
+
+        <div class="card" style="text-align:center">
+          <div class="mini">Рабочие часы</div>
+          <div style="font-weight:700">Пн—Пт 9:00—20:00</div>
+          <div class="mini">Сб по записи</div>
+        </div>
+      </aside>
+    </section>
+
+    <footer id="contacts">
+      <div class="contact">
+        <div class="mini">📧 tsoy.tatyanav@mail.ru</div>
+        <div class="mini">📱 +7 (915) 490-57-68</div>
+        <div class="mini">📍 Москва / Онлайн</div>
+      </div>
+      <div class="mini">© Татьяна — репетитор английского</div>
+    </footer>
+  </div>
+
+  <script>
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const note = document.getElementById('note').value.trim();
+      // Простая имитация отправки — открываем почтовый клиент
+      const subject = encodeURIComponent('Запись на урок — ' + service);
+      const body = encodeURIComponent('Имя: ' + name + '\nКонтакт: ' + email + '\nЦель: ' + note);
+      window.location.href = 'mailto:tsoy.tatyanav@mail.ru?subject=' + subject + '&body=' + bod
+      document.getElementById('msg').textContent = 'Открываем почтовый клиент для отправки...';
+      return false;
+    }
+
+    // Небольшой entrance animation
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.querySelectorAll('.card').forEach((c,i)=>{
+        c.style.opacity=0; c.style.transform='translateY(10px)';
+        setTimeout(()=>{c.style.transition='all 520ms cubic-bezier(.2,.8,.2,1)'; c.style.opacity=1; c.style.transform='translateY(0)';}, 120*i);
+      })
+    })
+  </script>
+</body>
+</html>
